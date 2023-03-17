@@ -9,7 +9,7 @@
 
     <tr class = "data-row" *ngFor="let satData of satellites">
         <td>{{satData.name}}</td>
-        <td>{{satData.type}}</td>
+        <td [class.warning]="satData.isSpaceDebris()">{{satData.type}}</td>
         <td>{{satData.operational}}</td>
         <td>{{satData.orbitType}}</td>
         <td>{{satData.launchDate}}</td>
